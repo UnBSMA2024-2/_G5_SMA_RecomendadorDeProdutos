@@ -48,9 +48,16 @@ O **SMA** é composto por quatro agentes principais, cada um responsável por um
 
 ## Screenshots
 
-A seguir, apresentamos alguns exemplos de telas/execução do projeto (coloque aqui imagens ilustrativas):
+A seguir, apresentamos alguns exemplos de telas/execução do projeto:
+- Inicio:
+![alt text](image1.png)
 
+- Processo:
+![alt text](image2.png)
+![alt text](image3.png)
 
+- Final:
+![alt text](image.png)
 ---
 
 ## Instalação
@@ -85,12 +92,11 @@ A seguir, apresentamos alguns exemplos de telas/execução do projeto (coloque a
    ```bash
    pip install -r requirements.txt
    ```
-5. **Execute o script principal**:
+5. **Execute o notebook principal utilizando o Jupyter**:
    ```bash
-   python main.py
+   sistemas_multiagente_recomendacao_produtos.ipynb
    ```
 
-Caso você deseje um script que facilite a execução, basta criar um arquivo `run.sh` (Linux/Mac) ou `run.bat` (Windows) com os comandos acima.
 
 ---
 
@@ -122,4 +128,51 @@ Caso você deseje um script que facilite a execução, basta criar um arquivo `r
 | Paulo Henrique | Desenvolvimento total do projeto    | Excelente                                           | [Commit #abc123](https://github.com/)   |
 
 ---
+## Video
+O arquivo com a demonstração da aplicação está localizado no próprio repositório, com o nome:
 
+> sma-entrega-video.mp4
+
+---
+## Outros
+
+### Desafios Enfrentados
+
+1. Coordenação entre Agentes: 
+* Apesar da eficiência da CrewAI, foram observadas redundâncias em algumas tarefas, destacando a necessidade de sincronização mais refinada.
+
+2. Inferências e Validação de Dados:
+* Agentes baseados em LLMs ocasionalmente geraram respostas genéricas ou irrelevantes, exigindo controles mais rígidos.
+* A validação de links e fontes confiáveis, embora funcional, pode ser aprimorada para abranger mais critérios e fontes diversificadas.
+
+3. Limitações Técnicas do Framework:
+* A CrewAI demonstrou maturidade, mas faltam recursos avançados, como suporte a buscas além do Google.
+
+4. Lições Aprendidas
+* A importância de estruturar melhor os dados coletados via web scraping para garantir recomendações de qualidade.
+* A integração de ferramentas robustas ampliaria a eficiência das buscas e da validação.
+* O uso de logs detalhados foi essencial para ajustes contínuos e compreensão do comportamento dos agentes.
+
+### Trabalhos Futuros
+
+* Incorporar novas ferramentas de busca e raspagem de dados para diversificar as fontes e melhorar a abrangência.
+
+* Refinar a coordenação entre agentes para eliminar redundâncias e otimizar o desempenho.
+
+* Explorar frameworks adicionais para expandir funcionalidades além das oferecidas pela CrewAI.
+
+--- 
+
+## Fontes
+
+- Jennings, N. R., Sycara, K., and Wooldridge, M. (1998). "A roadmap of agent research and development." Autonomous Agents and Multi-Agent Systems, 1(1):7–38. Este trabalho fornece uma base teórica para o desenvolvimento de sistemas multiagentes, abordando conceitos fundamentais como cooperação, coordenação e negociação entre agentes.
+
+- CrewAI Documentation. Documentação oficial da biblioteca CrewAI, utilizada para a implementação prática dos agentes, oferecendo suporte modular e eficiente para a definição e execução de tarefas.
+
+- Vullam, N., et al. (2023). "Multi-agent personalized recommendation system in e-commerce based on user clustering." 2nd International Conference on Applied Artificial Intelligence and Computing (ICAAIC). Este estudo inspirou a personalização das recomendações por meio de clusterização de usuários.
+
+- Yue, Z., et al. (2023). "Llamarec: Two-stage recommendation using large language models for ranking." arXiv preprint. Apresentou o uso de modelos de linguagem, como o LlamaRec, para melhorar a precisão em cenários de recomendação.
+
+- Verma, G., et al. (2024). "AdaptAgent: Adapting multimodal web agents with few-shot learning from human demonstrations." arXiv preprint. Contribuiu com ideias sobre frameworks multimodais e a adaptabilidade dos agentes a novos domínios.
+
+- Guo, Y., and Liu, Q. (2010). "E-commerce personalized recommendation system based on multi-agent." Seventh International Conference on Fuzzy Systems and Knowledge Discovery. Propôs uma abordagem híbrida integrando métodos offline e online para melhorar a relevância das recomendações.
